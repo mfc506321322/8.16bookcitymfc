@@ -1,0 +1,27 @@
+{{#each data}}{{#if this.data}}{{#with this.data}}
+<li>
+    <dl>
+        <dt>
+            <img src="{{cover}}" alt="">
+        </dt>
+        <dd>
+            {{title}}
+        </dd>
+    </dl>
+</li>
+{{/with}}
+{{else}}
+<li>
+    <a href="/page/detail/{{fiction_id}}">
+        <dl>
+            <dt>
+                <img src="{{cover}}" alt="">
+            </dt>
+            <dd>
+                {{title}}
+            </dd>
+        </dl>
+    </a>
+</li>
+{{/if}}
+{{/each}}

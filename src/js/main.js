@@ -1,0 +1,18 @@
+require.config({
+    baseUrl:'/js/',
+    paths:{
+        handlebars:"libs/handlebars.min",
+        jquery:"libs/jquery-3.3.1",
+        page:"libs/page",
+        index:"app/index",
+        pageindex:'route/index',
+        bookcity:'app/bookcity',
+        bookshelf:'app/bookshelf',
+        tab:'common/tab',
+        get:'common/get',
+        template:'common/template',
+        swiper:'libs/swiper-4.3.3.min',
+        detail:'app/detail'
+    }
+})
+require(['pageindex'])

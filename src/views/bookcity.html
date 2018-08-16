@@ -1,0 +1,96 @@
+<div class="search">
+    <i class="icon iconfont icon-fangdajing"></i>
+    <input type="text" placeholder="输入书名/作者/关键字">
+</div>
+<div class="banner swiper-container swiper-no-swiping">
+    <ul class="swiper-wrapper">
+        {{#each data.data}}
+        <li class="swiper-slide">
+            <img src="{{ad_pic_url}}" alt="">
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<ul class="list">
+    <li>
+        <img src="/img/pic1.png" alt="">
+        <span>限免</span>
+    </li>
+    <li>
+        <img src="/img/pic2.png" alt="">
+        <span>女生</span>
+    </li>
+    <li>
+        <img src="/img/pic3.png" alt="">
+        <span>男生</span>
+    </li>
+    <li>
+        <img src="/img/pic4.png" alt="">
+        <span>分类</span>
+    </li>
+    <li>
+        <img src="/img/pic5.png" alt="">
+        <span>排行</span>
+    </li>
+</ul>
+<div class="title">本周最火</div>
+<div class="hot">
+    <ul class="hotlist">
+    </ul>
+    <div class="end">
+        查看更多
+    </div>
+</div>
+
+<div class="zbRecommend">
+    <div class="zbhead">
+        <div class="zb_l">
+            <h2>重磅推荐</h2>
+            <em>推</em>
+        </div>
+        <div class="zb_r">
+            <span>男</span>
+            <span>女</span>
+        </div>
+    </div>
+    <div class="zb-cont"></div>
+    <div class="end">
+        <span class="change-btn" data-page="0">换一换</span>
+        <span>查看全部</span>
+    </div>
+</div>
+
+<div class="title">女生最爱</div>
+<div class="zbRecommend">
+    <div class="ns-cont"></div>
+    <div class="end">
+        <span class="change-btn" data-page="0">换一换</span>
+        <span>查看全部</span>
+    </div>
+</div>
+
+<div class="title">男生最爱</div>
+<div class="zbRecommend">
+    <div class="man-cont"></div>
+    <div class="end">
+        <span class="change-btn" data-page="0">换一换</span>
+        <span>查看全部</span>
+    </div>
+</div>
+
+<div class="title">限时免费</div>
+<div class="free">
+    <ul class="freelist">
+    </ul>
+    <div class="end">
+        更多限免佳作>>
+    </div>
+</div>
+
+<div class="zbRecommend">
+    <ul class="load-cont">
+    </ul>
+    <div class="end loading">
+        加载数据中
+    </div>
+</div>
