@@ -1,11 +1,11 @@
 define([
     'jquery',
     'get',
-    'template'
-], function($,get,temp) {
+    'template',
+    'tab'
+], function($,get,temp,table) {
     return function(info){
-        $('.index').hide();
-        $('.detail').show();
+        table.pageTab('.detail');
         get(info.url,function(data){
             var data = data ? JSON.parse(data) : {item:{title:'暂无数据'}};
             temp(info.context,data.item,'.detail');
@@ -13,7 +13,6 @@ define([
                 temp('<div>暂无数据</div>',data,'.detail>.main');
             }else{
                 get('/views/detail-content.html',function(html){
-                    console.log(data);
                     temp(html,data,'.detail>.main');
                 })
             }

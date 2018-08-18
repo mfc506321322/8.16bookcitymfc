@@ -1,1 +1,50 @@
-<a href="">开始阅读</a>
+<dl class="head">
+    <dt><img src="{{item.cover}}" alt=""></dt>
+    <dd>
+        <h2>{{item.title}}</h2>
+        <h3>{{item.authors}}</h3>
+        <p>{{item.score_count}}个评价</p>
+        <p>价格: {{item.price}}书币/千字</p>
+        <p>字数: {{#wordCount item.word_count}}{{/wordCount}}万字</p>
+    </dd>
+</dl>
+<div class="btn">
+    <button><a href="/page/read/{{item.source_id}}">开始阅读</a></button>
+    <button>下载</button>
+</div>
+
+<div class="textbox">
+    <div class="text">
+        {{item.content}}
+    </div>
+    <div class="end">
+        {{item.latest}}
+    </div>
+</div>
+
+<div class="tags">
+    <h3>类别标签</h3>
+    <div class="tagbox">
+        {{#each item.tags}}
+            <span>{{this}}</span>
+        {{/each}}
+    </div>
+</div>
+
+<div class="related">
+    <h3>作者其他图书</h3>
+    <ul class="relatedlist">
+        {{#each related}}
+            <li>
+                <dl>
+                    <dt>
+                        <img src="{{cover}}" alt="">
+                    </dt>
+                    <dd>
+                        {{authors}}
+                    </dd>
+                </dl>
+            </li>
+        {{/each}}
+    </ul>
+</div>

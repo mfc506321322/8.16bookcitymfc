@@ -12,7 +12,16 @@ require.config({
         get:'common/get',
         template:'common/template',
         swiper:'libs/swiper-4.3.3.min',
-        detail:'app/detail'
+        detail:'app/detail',
+        read:'app/read',
+        base64:'libs/jquery.base64',
+        search:'app/search'
+    },
+    shim:{
+        base64:{
+            exports:'base64',
+            deps:['jquery']
+        }
     }
 })
 require(['pageindex'])

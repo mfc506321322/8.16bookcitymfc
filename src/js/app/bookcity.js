@@ -1,4 +1,4 @@
-define(['jquery','tab','get','template','swiper'],function($,tab,get,temp,Swiper){
+define(['jquery','tab','get','template','swiper'],function($,table,get,temp,Swiper){
     function gethtml(url){
         var str = '';
         get(url,function(html){
@@ -37,7 +37,7 @@ define(['jquery','tab','get','template','swiper'],function($,tab,get,temp,Swiper
         })
     }
     return function(info){
-        tab({
+        table.tab({
             parent:'.tab',
             tag:'a',
             index:info.index

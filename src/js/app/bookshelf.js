@@ -1,14 +1,14 @@
-define(['jquery','tab','get','template'],function($,tab,get,temp){
+define(['jquery','tab','get','template'],function($,table,get,temp){
     return function(info){
-        tab({
+        table.tab({
             parent:'.header',
             tag:'a',
             index:info.index
         })
-        console.log(info);
         get(info.url,function(data){
             var data = JSON.parse(data);
-            temp(info.context,data.items[0],'.main');
+            console.log(data.items);
+            temp(info.context,data.items,'.main');
         })
     }
 })

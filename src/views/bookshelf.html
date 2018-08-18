@@ -1,1 +1,21 @@
-<h2>书架</h2>
+<div class="searchindex">
+    <a href="/page/search">
+        <i class="icon iconfont icon-fangdajing"></i>
+        <input type="text" placeholder="输入书名/作者/关键字">
+    </a>
+</div>
+<ul class="save">
+    {{#each this}}
+    <li>
+        <dl class="head">
+            <dt><img src="{{cover}}" alt=""></dt>
+            <dd>
+                <h2>{{title}}</h2>
+                <h3>{{authors}}</h3>
+                <p>已读: 第一章</p>
+                <p>最新: {{latest}}</p>
+            </dd>
+        </dl>
+    </li>
+    {{/each}}
+</ul>

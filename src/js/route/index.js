@@ -4,6 +4,8 @@ define(['page','index'],function(page,init){
     page('/index/bookcity',init.bookcity);
     page('/index/bookshelf',init.bookshelf);
     page('/page/detail/:pageid',init.detail);
+    page('/page/read/:pageid',init.read);
+    page('/page/search',init.search);
     page('*',init.render);
     page();
 })
